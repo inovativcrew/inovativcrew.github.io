@@ -1,227 +1,534 @@
 <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="libs/scrollReveal/scrollreveal.min.js"></script>
 
-<html>
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css"
+    />
+    <link rel="stylesheet" href="libs/glide/glide.core.min.css" />
+    <link rel="stylesheet" href="libs/glide/glide.theme.min.css" />
+    <link rel="stylesheet" href="style.css" />
 
-<head>
-
-
-
-
-
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial;
-  padding: 10px;
-  background: #708090;
-}
-
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  text-align: center;
-  background: #778899;
-}
-
-.header h1 {
-  font-size: 50px;
-}
-
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #123456;
-}
-
-/* Style the topnav links */
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
-
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #666666;
-  padding-left: 20px;
-}
-  background-color: blue;
-  padding: 20px;
-  margin-top: 20px;
-}
-
-/* Clear floats after the columns */
-.row::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .topnav a {
-    float: none;
-    width: 100%;
-  }
-}
-
-     
-       body {
-          display:flex;
-          flex-direction:column;
-          justify-content:flex-start;
-          align-items:flex-start;
-          heigt:100vh;
-          background:linear-gradient(to bottom, #222 0%, #000 100%);
-          color:#0f0;
-          text-shadow: 0 0 4px #0e0, 0 0 8px #0d0, 0 0 12px #0b0, 0 0 16px #0a0, 0 0 20px #040, 0 0 24px #020, 0 0 28px #000;
-          font-family: 'Courier New', Courier, monospace;
-          padding:20px;
-          padding-top:20%;
-          box-sizing:border-box;
-					border-color:#222;
-					border-style:inset;
-					border-width:30px;
-          overflow:hidden;
-          postion:relative;
-          }
-		#myDIV {
-			height:60px;
-			width: 300px;
-			background-color: #111;
-			font-family: fantasy;
-			text-align: center;
-			border-color: #0f0;
-			border-style: inset;
-			border-width: 10px;
-			
-		}
-		#myDIV2 {
-			height:50px;
-			width:300px;
-			background-color:#000;
-			font-family: courier;
-			text-align: center;
-			border-color:#00f;
-			border-style:outset;
-			border-width:10px;
-			
-			
-		}
-          .form-container {
-             width:300px;
-             }
-     #matrix {
-          position: absolute;
-          top:0;
-          left:0;
-          width:100%;
-          height:100%;
-          z-index:1;
-          overflow:hidden;
-          }
-     #matrix span {
-          position:absolute;
-          font-size:20px;
-          animation:matrix 2s linear infinite;
-          color:linear-gradient(to bottom, #0f0 0%, #000 100%);
-          white-space:nowrap;
-          }
-				 @keyframes	matrix {
-         0% { top: -100%; }
-         100% { top: 100%; }
-          }
-     
-</style>
-</head>
-<body>
-
-<div class="header">
-  <h1>My Website</h1>
-  <p>Resize the browser window to see the effect.</p>
-</div>
-
-<div class="topnav">
-  <a href="http://www.google.com/">Google</a>
-  <a href="http://www.xnxx.com">xnxx</a>
-  <a href="http://www.xhamster.com">retsmahx</a>
-  <a href="http://192.168.1.14:11111" style="float:right">Filza</a>
-</div>
-
-<div class="row">
-  <div class="leftcolumn">
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Dec 7, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <title>We put the pedal to the metal</title>
+  </head>
+  <body>
+    <!-- 头部 -->
+    <header class="open">
+      <div class="logo">Full Throttle Blooms</div>
+      <!-- 导航 -->
+      <nav>
+        <a href="#home">HOME</a>
+        <a href="#about-us">ABOUT</a>
+        <a href="#showcases">SHOWCASE</a>
+        <a href="#service">SERVICES</a>
+        <a href="#team-intro">TEAM-INTRO</a>
+        <a href="#company-activities">COMPANY-SEX</a>
+        <i class="fas fa-search"></i>
+      </nav>
+      <!-- 折叠导航按钮 -->
+      <div class="burger">
+        <div class="burger-line1"></div>
+        <div class="burger-line2"></div>
+        <div class="burger-line3"></div>
+      </div>
+    </header>
+    <!-- 首页图片轮播，使用glide JS插件 -->
+    <div class="glide" id="home">
+      <!-- 轮播轨道 -->
+      <div class="glide__track" data-glide-el="track">
+        <!-- 所有轮播容器 -->
+        <div class="glide__slides">
+          <!-- 单个轮播组件 -->
+          <div class="glide__slide">
+            <!-- 轮播标题 -->
+            <div class="slide-caption">
+              <h1>NIGGERS，ARE BLACK</h1>
+              <h3>
+                suck dick，fuckface。lil dummy nigga，pussyfaggot。
+              </h3>
+              <!-- 探索按钮 -->
+              <button class="explore-btn">EXPLORE</button>
+            </div>
+            <!-- 背景遮罩 -->
+            <div class="backdrop"></div>
+            <!-- 轮播图片 -->
+            <img src="images/people-in-couch-1024248.jpg" alt="" />
+          </div>
+          <!-- 第二张轮播 -->
+          <div class="glide__slide">
+            <div class="slide-caption left">
+              <h1>FUCKYOU</h1>
+              <h3>
+                立足科学发展，着力自主创新。加速科技进步，为全市经济社会发展提供有力支撑。凝聚科技创意，成就创新梦想。
+              </h3>
+              <button class="explore-btn">EXPLORE</button>
+            </div>
+            <div class="backdrop"></div>
+            <!-- 轮播视频 -->
+            <video src="videos/working-man.mp4" muted autoplay loop></video>
+          </div>
+        </div>
+      </div>
+      <!-- glide 控制按钮 -->
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
+          <
+        </button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+          >
+        </button>
+      </div>
+      <!-- glide 控制圆点 -->
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+      </div>
     </div>
-    <div class="card">
-      <h2>TITLE HEADING</h2>
-      <h5>Title description, Sep 2, 2017</h5>
-      <div class="fakeimg" style="height:200px;">Image</div>
-      <p>Some text..</p>
-      <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    </div>
-  </div>
-<div class="rightcolumn">
-    <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:100px;">Image</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    </div>
-    <div class="card">
-      <h3>Popular Post</h3>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-      <div class="fakeimg"><p>Image</p></div>
-    </div>
-    <div class="card">
-      <h3>Follow Me</h3>
-      <p>Some text..</p>
-    </div>
-  </div>
-</div>
+    <!-- 内容容器 -->
+    <div class="content-wrapper">
+      <!-- 关于我们， id用来导航菜单跳转 -->
+      <section id="about-us" class="about-us">
+        <!-- 标题 -->
+        <h2 class="title1">关于我们</h2>
+        <!-- 补充说明区域 -->
+        <p class="intro">
+          cunt、空间租用、网站开发、网站建设与网络营销活动策划相关的企业组织。
+        </p>
+        <!-- 公司业务容器，栅格布局 -->
+        <div class="features">
+          <!-- 公司业务 -->
+          <div class="feature">
+            <!-- 左侧业务图标 -->
+            <i class="fas fa-lightbulb"></i>
+            <!-- 右侧业务标题 -->
+            <h4 class="feature-title">creativity</h4>
+            <!-- 右侧业务内容 -->
+            <p class="feature-content">
+              suckaniggadickorsum
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-chart-line"></i>
+            <h4 class="feature-title">marketing</h4>
+            <p class="feature-content">
+              anal discharge、cum guzzle、tit fuck
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-shopping-cart"></i>
+            <h4 class="feature-title">e-cummerce</h4>
+            <p class="feature-content">
+              fuckin fuck，butt lick，figger nucker
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-desktop"></i>
+            <h4 class="feature-title">web design</h4>
+            <p class="feature-content">
+              build builds设、builds builder、domination
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-tachometer-alt"></i>
+            <h4 class="feature-title">website optomitrist</h4>
+            <p class="feature-content">
+              fuckchinaandtheirbitchasswebsites
+            </p>
+          </div>
+          <div class="feature">
+            <i class="fas fa-server"></i>
+            <h4 class="feature-title">website putter inner</h4>
+            <p class="feature-content">
+              show niggers nigger shit bitch 
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- 成功案例 -->
+      <!-- section-bg 区域灰色背景 -->
+      <section id="showcases" class="showcases section-bg">
+        <h2 class="title1">STORIES</h2>
+        <!-- 筛选按钮 -->
+        <div class="filter-btns">
+          <button class="filter-btn active" data-filter="*">
+            TOTAL
+          </button>
+          <!-- 指定要过滤的class selector，包括. -->
+          <button class="filter-btn" data-filter=".web">
+            WEB
+          </button>
+          <button class="filter-btn" data-filter=".mobile">
+            MOBILE
+          </button>
+          <button class="filter-btn" data-filter=".science">
+            SCIENCE
+          </button>
+        </div>
+        <!-- 案例 -->
+        <div class="cases">
+          <!-- case-item样式类，web science为类别类 -->
+          <div class="case-item web science">
+            <!-- 图片 -->
+            <img
+              src="images/gray-laptop-computer-showing-html-codes-in-shallow-focus-160107.jpg"
+              alt=""
+            />
+          </div>
+          <div class="case-item web science">
+            <img src="images/photo-of-imac-near-macbook-1029757.jpg" alt="" />
+          </div>
+          <div class="case-item web">
+            <img src="images/apple-laptop-notebook-office-39284.jpg" alt="" />
+          </div>
+          <div class="case-item web">
+            <img
+              src="images/apple-apple-device-design-desk-285814.jpg"
+              alt=""
+            />
+          </div>
+          <div class="case-item mobile">
+            <img
+              src="images/person-using-black-and-white-smartphone-and-holding-blue-230544.jpg"
+              alt=""
+            />
+          </div>
+          <div class="case-item science">
+            <img src="images/person-holding-a-smartphone-892757.jpg" alt="" />
+          </div>
+          <div class="case-item mobile web science">
+            <img src="images/blur-close-up-code-computer-546819.jpg" alt="" />
+          </div>
+          <div class="case-item mobile ">
+            <img
+              src="images/bokeh-photography-of-person-holding-turned-on-iphone-1440727.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <!-- 服务流程 -->
+      <section id="service" class="service">
+        <h2 class="title1">SERVICE</h2>
+        <p class="intro">
+          buncha shit
+        </p>
+        <!-- 同关于我们 -->
+        <div class="services">
+          <div class="service-item">
+            <i class="fas fa-comments"></i>
+            <h2 class="service-title">demand cum</h2>
+            <p class="service-content">
+              bitchass muffhugger
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-gavel"></i>
+            <h2 class="service-title">project shit talking</h2>
+            <p class="service-content">
+             fuckthecustomerswife
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-file-signature"></i>
+            <h2 class="service-title">sign your life away</h2>
+            <p class="service-content">
+              sign it bitch
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-user"></i>
+            <h2 class="service-title">ask a nigga sum</h2>
+            <p class="service-content">
+              half ass some shit to get the sale
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-chalkboard-teacher"></i>
+            <h2 class="service-title">actual shit</h2>
+            <p class="service-content">
+              finish on her face
+            </p>
+          </div>
+          <div class="service-item">
+            <i class="fas fa-user-check"></i>
+            <h2 class="service-title">streetcred</h2>
+            <p class="service-content">
+              forge the signature
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- 团队介绍 -->
+      <section id="team-intro" class="team-intro section-bg">
+        <h2 class="title1">say what up to the niggas</h2>
+        <!-- 团队成员容器 -->
+        <div class="team-members">
+          <!-- 团队成员 -->
+          <div class="team-member">
+            <!-- 成员照片 -->
+            <div class="profile-image">
+              <img src="images/man-wearing-black-suit-2955376.jpg" alt="" />
+            </div>
+            <!-- 成员姓名 -->
+            <h4 class="name">jamal</h4>
+            <!-- 成员职位 -->
+            <p class="position">stupid nigger</p>
+            <!-- 成员社交账号 -->
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="team-member">
+            <div class="profile-image">
+              <img
+                src="images/smiling-woman-wearing-black-sweater-1587009.jpg"
+                alt=""
+              />
+            </div>
+            <h4 class="name">stacy</h4>
+            <p class="position">cumdumpster</p>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="team-member">
+            <div class="profile-image">
+              <img
+                src="images/selective-focus-photograph-of-man-wearing-gray-suit-jacket-1138903.jpg"
+                alt=""
+              />
+            </div>
+            <h4 class="name">jerome</h4>
+            <p class="position">dummy nigga</p>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="team-member">
+            <div class="profile-image">
+              <img src="images/business-woman-2697954_1920.jpg" alt="" />
+            </div>
+            <h4 class="name">fuck</h4>
+            <p class="position">marketing specialist</p>
+            <ul class="social-links">
+              <li>
+                <a href="#"><i class="fab fa-weixin"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-weibo"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-github"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- 数据展示  -->
+      <section id="data-section" class="data-section">
+        <!-- 单个数据  -->
+        <div class="data-piece">
+          <!-- 图标 -->
+          <i class="fas fa-code"></i>
+          <!-- 数据 -->
+          <div class="num">156</div>
+          <!-- 单位 -->
+          <div class="data-desc">LINE CODE</div>
+        </div>
+        <div class="data-piece">
+          <i class="fas fa-award"></i>
+          <div class="num">288</div>
+          <div class="data-desc">AWARDS</div>
+        </div>
+        <div class="data-piece">
+          <i class="fas fa-laugh-wink"></i>
+          <div class="num">1588</div>
+          <div class="data-desc">CUSTOMER</div>
+        </div>
+        <div class="data-piece">
+          <i class="fas fa-folder"></i>
+          <div class="num">200</div>
+          <div class="data-desc">INDIVIDUAL PROJECTS</div>
+        </div>
+      </section>
+      <!-- 公司动态 -->
+      <section id="company-activities" class="company-activities">
+        <h2 class="title1">COMPANY NEWS</h2>
+        <p class="intro">
+          come out them pockets
+        </p>
+        <!-- 动态容器 -->
+        <div class="activities">
+          <!-- 动态 -->
+          <div class="activity">
+            <!-- 动态图片 -->
+            <div class="act-image-wrapper">
+              <img src="images/activity01-image.jpg" alt="" />
+            </div>
+            <!-- 动态元数据，包括发表日期和评论数量 -->
+            <div class="meta">
+              <!-- 发布日期 -->
+              <p class="date-published">
+                <i class="far fa-calendar"></i> 2019年12月1日
+              </p>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
-
-</body>
+              <p class="comments"><i class="far fa-comments"></i> 33cum loads</p>
+            </div>
+            <!-- 动态标题 -->
+            <h2 class="act-title">thai ladyboys</h2>
+            <!-- 动态内容摘要 -->
+            <article>
+              these bitches are dudes that are bitches with dicks
+            </article>
+            <!-- 阅读更多按钮 -->
+            <button class="readmore-btn">readmore</button>
+          </div>
+          <div class="activity">
+            <div class="act-image-wrapper">
+              <img src="images/watercrafts-on-river-3464632.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <p class="date-published">
+                <i class="far fa-calendar"></i> 2019年12月1日
+              </p>
+              <p class="comments"><i class="far fa-comments"></i> 33blowjobs</p>
+            </div>
+            <h2 class="act-title">dicksuckin</h2>
+            <article>
+              what that mouth do
+            </article>
+            <button class="readmore-btn">READ MORE</button>
+          </div>
+          <div class="activity">
+            <div class="act-image-wrapper">
+              <img src="images/red-suspension-bridge-3493772.jpg" alt="" />
+            </div>
+            <div class="meta">
+              <p class="date-published">
+                <i class="far fa-calendar"></i> 2019年12月1日
+              </p>
+              <p class="comments"><i class="far fa-comments"></i> 33COMMENTS</p>
+            </div>
+            <h2 class="act-title">ligmaballz</h2>
+            <article>
+              网络公司原本指的是提供网络服务的互联网内容提供商ICP公司，提供互联网接入的ISP公司，提供内容托管的IDC提供商，还有无线接入、网络游戏、网络视频、网络培训、网络销售。
+            </article>
+            <button class="readmore-btn">READ MORE BITCH</button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <!-- 底部信息 -->
+    <footer>
+      <!-- 底部菜单 -->
+      <div class="footer-menus">
+        <!-- 联系信息 -->
+        <div class="contact-us">
+          <p class="menu-title">CONTACT US</p>
+          <p>ADDRESS:666buttfuck </p>
+          <p>Tel:55555555</p>
+          <p>Fucks：+18618618611861</p>
+          <p>email：fuckedyour@mom.com</p>
+        </div>
+        <!-- 导航菜单 -->
+        <div class="service-menu footer-menu">
+          <p class="menu-title">SERVICE</p>
+          <ul class="menu-items">
+            <li><a href="#">web build</a></li>
+            <li><a href="#">domination purchase</a></li>
+            <li><a href="#">design</a></li>
+            <li><a href="#">app</a></li>
+          </ul>
+        </div>
+        <div class="showcase-menu footer-menu">
+          <p class="menu-title">SHOWCASE</p>
+          <ul class="menu-items">
+            <li><a href="#">desktop site</a></li>
+            <li><a href="#">net</a></li>
+            <li><a href="#">research</a></li>
+            <li><a href="#">soft penis</a></li>
+          </ul>
+        </div>
+        <div class="activity-menu footer-menu">
+          <p class="menu-title">ACTIVITY</p>
+          <ul class="menu-items">
+            <li><a href="#">dox</a></li>
+            <li><a href="#">word</a></li>
+            <li><a href="#">blog</a></li>
+          </ul>
+        </div>
+        <div class="help-menu footer-menu">
+          <p class="menu-title">HELP</p>
+          <ul class="menu-items">
+            <li><a href="#">dumbfuckland</a></li>
+            <li><a href="#">snitch</a></li>
+            <li><a href="#">docs</a></li>
+          </ul>
+        </div>
+        <!-- 备案信息 -->
+        <p class="icp-info">
+          京ICP备 12345678901-1 号
+        </p>
+        <!-- 版权信息 -->
+        <p class="rights">
+          &copy; 2020 copyright
+        </p>
+        <!-- 返回顶部按钮 -->
+        <div class="scrollToTop">
+          <a href="#home"><i class="fas fa-chevron-up"></i></a>
+        </div>
+      </div>
+    </footer>
+    <!-- 轮播插件 -->
+    <script src="libs/glide/glide.min.js"></script>
+    <!-- 案例筛选组件  -->
+    <script src="libs/isotope/isotope.pkgd.min.js"></script>
+    <!-- 动画组件 -->
+    <script src="libs/anime/anime.min.js"></script>
+    <!-- 流畅滑动组件 -->
+    <script src="libs/smooth-scroll/smooth-scroll.polyfills.min.js"></script>
+    <!-- 自定义JS文件 -->
+    <script src="index.js"></script>
+  </body>
 </html>
