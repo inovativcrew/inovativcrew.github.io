@@ -26,9 +26,9 @@ img {
   --text-color-lightest: #00abcd;
   --text-color-darker: #00ff00;
   --text-color-dark: #660066;
-  --text-color-gray: #ebfb0e;
-  --text-color-dark-gray: #1a2b3c;
-  --text-color-light-gray: #abcdef;
+  --text-color-gray: #444444;
+  --text-color-dark-gray: #222222;
+  --text-color-light-gray: #666666;
   --backdrop-color: rgba(50, 50, 50, 0.69);
 }
 
