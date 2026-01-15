@@ -12,7 +12,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: Helvetica, "PingFang SC", "Microsoft Yahei", sans-serif;
-  font-size: 14px;
+  font-size: 12px;
 }
 /* 图片默认宽度100% */
 img {
@@ -22,14 +22,14 @@ img {
 /* 定义变量 */
 :root {
   --primary-color: #00ff00;
-  --secondary-color: #00ffff;
-  --text-color-lightest: #00ffff;
+  --secondary-color: #210ff4;
+  --text-color-lightest: #00abcd;
   --text-color-darker: #00ff00;
-  --text-color-dark: #00FF00;
-  --text-color-gray: #666666;
-  --text-color-dark-gray: #333333;
-  --text-color-light-gray: #aaaaaa;
-  --backdrop-color: rgba(20, 20, 20, 0.69);
+  --text-color-dark: #660066;
+  --text-color-gray: #ebfb0e;
+  --text-color-dark-gray: #1a2b3c;
+  --text-color-light-gray: #abcdef;
+  --backdrop-color: rgba(50, 50, 50, 0.69);
 }
 
 /* ============= 头部================== */
@@ -147,7 +147,7 @@ header.sticky nav i {
 
 /* 轮播标题中的主标语 */
 .slide-caption h1 {
-  font-size: 54px;
+  font-size: 24px;
   font-weight: 600;
 }
 
@@ -289,7 +289,7 @@ section {
 /* 标题 */
 .feature-title {
   grid-area: title;
-  font-size: 18px;
+  font-size: 24px;
   color: var(--text-color-darker);
 }
 
@@ -405,7 +405,7 @@ section {
   grid-area: content;
   color: var(--text-color-gray);
   line-height: 30px;
-  font-size: 16px;
+  font-size: 12px;
   /* align-self: st; */
   margin-top: 8px;
 }
@@ -413,7 +413,7 @@ section {
 /* ============= 团队介绍  ================== */
 /* 团队介绍 */
 .team-intro {
-  margin-top: 48px;
+  margin-top: 28px;
   padding-top: 62px;
   padding-bottom: 52px;
 }
@@ -529,7 +529,7 @@ section {
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   justify-items: center;
-  color: blue;
+  color: #00ff00;
   position: relative;
   z-index: 40;
 }
@@ -617,7 +617,7 @@ section {
 /* 阅读更多按钮 */
 .readmore-btn {
   border: 0;
-  color: pink;
+  color: black;
   background-color: var(--primary-color);
   border-radius: 4px;
   padding: 6px 14px;
@@ -812,7 +812,7 @@ footer {
     position: absolute;
     top: 0;
     left: 0;
-    background: #222222;
+    background: rgba(34,34,34,0.5);
     width: 100vw;
     height: 100vh;
     padding: 0 40px;
